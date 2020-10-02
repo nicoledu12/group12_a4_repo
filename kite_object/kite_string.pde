@@ -1,4 +1,4 @@
-class kite{
+class kite_string{
   float x1;
   float y1;
   float x2;
@@ -8,7 +8,7 @@ class kite{
   float x4;
   float y4;
   
-  kite(){
+  kite_string(){
     x1 =0;
     y1 =0;
     x2 =0;
@@ -19,7 +19,7 @@ class kite{
     y4 =0;
   }
   
-  kite(float x1, float y1,float x2, float y2,float x3, float y3,float x4, float y4){
+  kite_string(float x1, float y1,float x2, float y2,float x3, float y3,float x4, float y4){
     this.x1 =x1;
     this.y1 =y1;
     this.x2 =x2;
@@ -31,10 +31,13 @@ class kite{
   }
   
   void display(){
-    //220,180(pivot point) 3
-    strokeWeight(1);
-    stroke (0);
-    fill (203,45,45);
-    quad(x1,y1,x2,y2,0,0,x4,y4);
-  } 
+    noFill();
+    bezier(x1,y1,x2,y2,x3,y3,x4,y4);
+    
+    //new kite(180,100, 230,120, 220,180, 160,140);
+    //bezier(220, 180, 260, 220, 200, 330, 320, 350);
+  
+  }
+  
+  
 }
